@@ -10,7 +10,8 @@ export const appendDotEnv = (key: string, value: string) => {
 
 export const configDotEnv = () => {
   if (fromRoot) {
-    dotenv.config({ path: '../../.env' });
+    // Dotenv.config({ path: '../../.env' });
+    dotenv.config();
   } else {
     dotenv.config();
   }
