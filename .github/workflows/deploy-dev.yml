@@ -2,7 +2,7 @@ name: Deploy Dev
 
 on:
   push:
-    branches: [master]
+    branches: [test-1]
 
 concurrency: deploy-dev
 
@@ -47,7 +47,7 @@ jobs:
       - name: Sleep for 5 seconds
         run: sleep 5s
 
-      - name: Health check
-        run: curl $DEV_SERVER_URL/api/status -If
-        env:
-          DEV_SERVER_URL: ${{ secrets.DEV_SERVER_URL }}
+      # - name: Health check
+      #   run: curl $DEV_SERVER_URL/api/status -If
+      #   env:
+      #     DEV_SERVER_URL: ${{ secrets.DEV_SERVER_URL }}
