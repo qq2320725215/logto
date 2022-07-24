@@ -25,7 +25,7 @@ logs
 cache
 .*cache
 .DS_Store
-*.env
+# *.env
 .idea/
 *.pem
 .history
